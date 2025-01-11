@@ -10,7 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2025_01_11_172126) do
+ActiveRecord::Schema[8.0].define(version: 2025_01_11_173611) do
+  create_table "internet_speeds", force: :cascade do |t|
+    t.integer "place_id", null: false
+    t.decimal "download_speed", precision: 10, scale: 2, null: false
+    t.string "download_units", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["place_id"], name: "index_internet_speeds_on_place_id"
+  end
+
   create_table "places", force: :cascade do |t|
     t.string "name"
     t.string "address"

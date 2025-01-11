@@ -7,3 +7,11 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+
+
+Place.create!(name: "PVR", address: "abc street", city: "New Delhi")
+InternetSpeed.create!(place_id: place.id, download_speed: 25.55, download_units: "mbps")
+
+place = Place.create!(name: "PVR", address: "abc street", city: "New Delhi")
+
+InternetSpeed.create!(place_id: place.id, download_speed: 25.55, download_units: "mbps")
