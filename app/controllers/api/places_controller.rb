@@ -15,16 +15,19 @@ module Api
   end
 
   def latest_download_speed(place)
-    place.internet_speeds.order("created_at DESC").last.download_speed
+    place.internet_speeds.order("created_at DESC").last&.download_speed
   end
 
   def latest_download_units(place)
-    place.internet_speeds.order("created_at DESC").last.download_units
+    place.internet_speeds.order("created_at DESC").last&.download_units
   end
+  place.internet_speeds.order("created_at DESC").last&.download_units
+  # in above, & works as short ckt
+  # not a good code, fix it later
 
   def number_of_measurements(place)
     place.internet_speeds.count
   end
-  
+
   end
 end

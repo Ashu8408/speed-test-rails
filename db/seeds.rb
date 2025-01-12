@@ -9,9 +9,9 @@
 #   end
 
 
+Place.delete_all
 Place.create!(name: "PVR", address: "abc street", city: "New Delhi")
+Place.create!(name: "My home", address: "CHPG saket", city: "New Delhi")
+
 InternetSpeed.create!(place_id: place.id, download_speed: 25.55, download_units: "mbps")
-
-place = Place.create!(name: "PVR", address: "abc street", city: "New Delhi")
-
 InternetSpeed.create!(place_id: place.id, download_speed: 25.55, download_units: "mbps")
