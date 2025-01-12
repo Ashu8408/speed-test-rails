@@ -63,3 +63,5 @@ group :test do
 end
 
 gem "jsbundling-rails"
+
+gem "cssbundling-rails"

@@ -21,7 +21,7 @@ module Api
   def latest_download_units(place)
     place.internet_speeds.order("created_at DESC").last&.download_units
   end
-  place.internet_speeds.order("created_at DESC").last&.download_units
+  # place.internet_speeds.order("created_at DESC").last&.download_units
   # in above, & works as short ckt
   # not a good code, fix it later
 
