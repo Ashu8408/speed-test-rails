@@ -34,7 +34,7 @@ function renderPlacesPage(body, onSearchTextChange) {
   );
 }
 
-function PlacesList() {
+export default function PlacesList() {
   //Show loading
   //loaded places array
 
@@ -122,5 +122,3 @@ function PlacesList() {
 }
 
 // Render the component into the div with id "places_list_container"
-const placesList = ReactDOM.createRoot(document.getElementById("page-places"));
-placesList.render(<PlacesList />);
