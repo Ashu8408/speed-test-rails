@@ -115,9 +115,9 @@ function PlacesList() {
   )
 
   if (loading) {
-    return renderPlacesPage(loadingSection);
+    return renderPlacesPage(loadingSection, onSearchTextChange);
   } else {
-    return renderPlacesPage(dataSection);
+    return renderPlacesPage(dataSection, onSearchTextChange);
   }
 }
 
